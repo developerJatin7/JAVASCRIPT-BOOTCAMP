@@ -192,10 +192,23 @@
 // };
 // obj4.fn()()();  // Logs "undefined" because 'this' in the regular function does not refer to obj4
 
-const add = (a, b) => a + b;
-console.log(add(2, 3));
+// const add = (a, b) => a + b;
+// console.log(add(2, 3));
 
-const num = a => (a % 2 === 0 ? "Even" : "Odd");
-console.log(num(5));
-const greet = (name = "Guest") => `Hello ${name}`;
-console.log(greet(null));
+// const num = a => (a % 2 === 0 ? "Even" : "Odd");
+// console.log(num(5));
+// const greet = (name = "Guest") => `Hello ${name}`;
+// console.log(greet(null));
+
+const obj5= {
+  name: "Jatin",
+  fn() {
+    return function() {
+      return () => {
+        console.log(this.name);
+      }
+    }.bind(this);  // Bind 'this' to the regular function
+  }
+};
+obj5.fn()()();  // Now correctly logs "Jatin"
+
