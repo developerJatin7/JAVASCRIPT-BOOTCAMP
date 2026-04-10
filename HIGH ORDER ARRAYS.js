@@ -63,12 +63,12 @@
 // });
 // console.log(newnums);
 
-const nums = [1, 2, 3];
+// const nums = [1, 2, 3];
 
-const result = nums.map(num => {
-  if (num > 1) return num * 2;
-  else return num;
-});
+// const result = nums.map(num => {
+//   if (num > 1) return num * 2;
+//   else return num;
+// });
 
-console.log(result);
+// console.log(result);
   
