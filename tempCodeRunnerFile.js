@@ -1,20 +1,19 @@
-let book = {
-//     title: "GOT",
-//     author: "George R.R. Martin",
-//     year: 1996
-// };
-// console.log(book.title); // Output: GOT
-// console.log(book.author);
+// Promise resolve
+    const myPromise2 = new Promise((resolve, reject) => {
+    const success = true;
+    if (success) {
+        resolve("It worked!");
+    } else {
+        reject("Something failed!");
+    } });
 
-// let student = {
-//     name: "John",
-//     marks: 80,
-//     grade:"A",
-//     isPassed: true
-// };
-// student.marks = 85; // Updating marks
-// student.grade = "A+"; // Updating grade
-// student.name = "John Doe"; // Updating name
-// console.log(student.marks);
-// console.log(student.grade);
-// console.log(student.name);
+myPromise2
+.then((value) => {
+    console.log(value); // "It worked!" 
+})
+.catch((error) => {
+    console.log(error); // SKIPPED
+})
+.finally(()=> {
+    console.log("Done either way!"); // "Done either way!"
+});
