@@ -141,18 +141,18 @@
 // const x = obj.fn;
 // x()();
 
-// const obj = {
-//   name: "Jatin",
-//   fn() {
-//     return () => {  // Arrow function now
-//       return () => {
-//         console.log(this.name);
-//       };
-//     };
-//   }
-// };
+const obj = {
+  name: "Jatin",
+  fn() {
+    return () => {  // Arrow function now
+      return () => {
+        console.log(this.name);
+      };
+    };
+  }
+};
 
-// obj.fn()()();  // Now logs "Jatin"
+obj.fn()()();  // Now logs "Jatin"
 
 // const obj2 = {
 //   name: "Rahul",
